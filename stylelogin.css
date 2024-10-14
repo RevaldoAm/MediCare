@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    box-shadow: 0px 10px 15px -7px;
+}
+
+.center h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    font-weight:400;
+}
+
+.center form{
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.619);
+    margin: 30px 0;
+}
+
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: black;
+}
+
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: black;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #38abab;
+    transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #38abab;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+
+input{
+    width: 50%;
+    height: 50px;
+    border: 0px;
+    background: #38abab;
+    border-radius: 10px ;
+    font-size: 18px;
+    color: white;
+    font-weight: lighter;
+    outline: none;
+}
+.input{
+    margin-left: 60px;
+    cursor: pointer;
+}
+.input:hover{
+    background: whitesmoke;
+    color: black;
+    border: #38abab solid;
+}
+input:hover{
+    border-color: #38abab;
+    transition: 0.5s;
+}
+
+.signup_link{
+    margin: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: black;
+    font-weight: 450;
+}
+
+.signup_link a{
+    color: #38abab;
+}
